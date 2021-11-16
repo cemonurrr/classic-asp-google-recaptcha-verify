@@ -4,7 +4,7 @@
         Dim recaptcha_secret, sendstring, objXML
         recaptcha_secret = "secret_key_here"
 
-        sendstring = "https://www.google.com/recaptcha/api/siteverify?secret=" & recaptcha_secret & "&response=" & Request.form("GResponse")
+        sendstring = "https://www.google.com/recaptcha/api/siteverify?secret=" & recaptcha_secret & "&response=" & Request.form("g-recapcha-response")
 
         Set objXML = Server.CreateObject("MSXML2.ServerXMLHTTP")
         objXML.Open "GET", sendstring, False
